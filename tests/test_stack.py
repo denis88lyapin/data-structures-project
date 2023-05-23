@@ -50,3 +50,10 @@ class StackTest(unittest.TestCase):
         stack = Stack()
         with self.assertRaises(AttributeError):
             stack.pop()
+
+    def test_stack_str(self):
+        stack = Stack()
+        self.assertEqual(str(stack), 'Стек пустой')
+        stack.push('data1')
+        stack.push('data2')
+        self.assertEqual(str(stack), 'Стек: data2, data1')
