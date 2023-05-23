@@ -24,8 +24,8 @@ class Stack:
         current = self.top
         items = []
         while current:
-            items.append(current.item)
-            current = current.next
+            items.append(current.data)
+            current = current.next_node
         return f"Стек: {', '.join(items)}"
 
     def push(self, data):
