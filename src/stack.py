@@ -18,6 +18,16 @@ class Stack:
         """Конструктор класса Stack"""
         self.top = None
 
+    def __str__(self):
+        if self.top is None:
+            return "Стек пустой"
+        current = self.top
+        items = []
+        while current:
+            items.append(current.item)
+            current = current.next
+        return f"Стек: {', '.join(items)}"
+
     def push(self, data):
         """
         Метод для добавления элемента на вершину стека
