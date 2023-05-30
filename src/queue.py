@@ -42,7 +42,7 @@ class Queue:
         :return: данные удаленного элемента
         """
         if self.head is None:
-            raise AttributeError("Очередь пуста")
+            return None
         data = self.head.data
         self.head = self.head.next_node
         if self.head is None:
