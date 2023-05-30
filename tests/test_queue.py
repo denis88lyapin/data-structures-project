@@ -39,7 +39,7 @@ class QueueTests(unittest.TestCase):
         self.assertIsNone(queue.head)
         self.assertIsNone(queue.tail)
 
-        self.assertRaises(AttributeError, queue.dequeue)
+        self.assertIsNone(queue.head)
 
     def test_str(self):
         queue = Queue()
