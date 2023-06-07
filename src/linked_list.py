@@ -37,8 +37,7 @@ class LinkedList:
 
         ll_string = ""
         while node:
-            ll_string += f" {str(node.data)} ->"
+            ll_string += f"{str(node.data)} -> "
             node = node.next_node
-
-        ll_string += " None"
+        ll_string += "None"
         return ll_string
